@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -54,5 +54,4 @@ transform: translate(2px, 2px);
 .opr{
 color: #1ef0a0;
 background: #1e1919;
-
 }
