@@ -2,11 +2,21 @@ let input = document.getElementById("inputBox");
 let buttons = document.querySelectorAll("button");
 let string = "";
 let arr = Array.from(buttons);
+let tout = "";
 arr.forEach(button =>{
     button.addEventListener("click", (e) =>{
         if(e.target.innerHTML == '='){
-            string = eval(string);
-            input.value = string;
+            try{
+                string = eval(string);
+                input.value = string;
+            }catch(error) {
+                input.value = 'invalidOperation'
+                tout = setTimeout(() => {
+                    input.value = "";
+                    string = "";
+                },2000)
+            }
+            
         }
         
         else if(e.target.innerHTML == "AC"){
@@ -19,7 +29,13 @@ arr.forEach(button =>{
             input.value = string;
         }
         
-        else{
+        else{ 
+            if(input.value === 'invalidOperation'){
+                console.log('invalid');
+                clearTimeout(tout)
+                input.value = "";
+                string = "";
+            }
             string += e.target.innerHTML;
 
             input.value = string;
