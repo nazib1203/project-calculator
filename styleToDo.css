@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: linear-gradient(#025658, #ef5757);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.input-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+}
+.input-container input {
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-block: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.input-container input[type="text"]{
+    width: 70%;
+}
+.input-container input[type="button"]{
+    background-color: rgba(4, 53, 93, 0.726);
+    color: #fff;
+    font-weight: 750;
+    margin-left: 10px;
+    cursor: pointer;
+}
+ul {
+    width: 100%;
+    max-width: 400px;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+}
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-block-end: 10px;
+    border-radius: 8px;
+    border: 1px solid #222;
+    padding: 10px 12px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul li p{
+    flex-grow: 1;
+    padding: 2px;
+}
+.btn{
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    padding: 8px;
+}
+.deleteBtn{
+    color: red
+}
+.editBtn{
+    color: green    
+}
